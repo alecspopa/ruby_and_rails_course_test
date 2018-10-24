@@ -5,7 +5,7 @@
 
   <div class="row">
     <div class="media">
-      <img class="align-self-start mr-3" src="<%= @product.image.path('64x64') %>" alt="Product image">
+      <%= image_tag @product.image.variant(resize: '64x64'), class: 'align-self-start mr-3' %>
       <div class="media-body">
         <h5 class="mt-0"><%= @product.name %> (<%= link_to 'Edit', edit_product_path(@product) %> | <%= link_to 'Back', products_path %>)</h5>
         <p><%= @product.description %></p>
